@@ -1,17 +1,16 @@
-{% extends 'base/base.html' %} {% block content %}
-
-<h1>
-    Base project for the
-    <a target="_blank" href="https://leanpub.com/django-the-easy-way"
-        >"Django - The Easy Way" </a
-    >book.
-</h1>
-
-<p class="lead">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis
-    eligendi cumque totam rem consequuntur consequatur? Est, provident dolor.
-    Velit nihil eligendi facilis perspiciatis voluptatum ad reiciendis molestias
-    mollitia quisquam?
-</p>
-
-{% endblock %}
+{% extends 'base/base.html' %} {% block content %} {% for flower in flowers %}
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">{{ flower.title }}</h5>
+        <p class="card-text">
+            Lorem ipsum, dolor sit amet cons\ ectetur adipisicing elit.
+        </p>
+        <a href="adminmyapp/flower/{{ flower.id }}/change/" \ class="card-link"
+            >Edit</a
+        >
+        <a href="adminmyapp/flower/{{ flower.id }}/delete/" \ class="card-link"
+            >Delete</a
+        >
+    </div>
+</div>
+{% endfor %} {% endblock %}

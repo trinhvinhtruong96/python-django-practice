@@ -5,3 +5,8 @@
 ## django-admin startproject mysite .
 ## python manage.py runserver
 ## python manage.py startapp myapp
+
+## python manage.py makemigrations
+
+## python manage.py migrate
+## python manage.py createsuperuser
